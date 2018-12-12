@@ -2,8 +2,10 @@ import React from 'react';
 
 const Header = () => (
   <React.Fragment>
-    <div>Hero</div>
-    <div>Header</div>
+    <div>
+      <span>Hero</span>
+      span
+    </div>
   </React.Fragment>
 );
 
