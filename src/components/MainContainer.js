@@ -5,3 +5,5 @@ class MainContainer extends React.Component {
     return <div>Products</div>;
   }
 }
+
+export default MainContainer;
