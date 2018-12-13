@@ -10,9 +10,9 @@ const ProductItem = ({ item }) => {
                     <div className="product-category">
                         {item.category}
                     </div>
-                    <span className="product-label">
+                    <div className="product-label">
                         {item.name}
-                    </span>
+                    </div>
                     <div className="product-price">
                         {item.price}
                     </div>
