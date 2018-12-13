@@ -1,0 +1,29 @@
+.store-name {
+    float: left;
+    width: 20%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-style: italic;
+    margin-top: 10px;    
+    text-align: left;
+}
+.store-menu-section {
+    float: right;
+    width: 80%;
+}
+
+.menu-hero-header li{ 
+    background: transparent;    
+    /* display: inline; */
+    list-style: none;
+    padding: 20px;    
+    float: left;
+}
+
+.menu-hero-header li:last-child {
+    float: right;
+}
+
+.menu-hero-header li:hover { 
+    background: #d8d8d8;
+}

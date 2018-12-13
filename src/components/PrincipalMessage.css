@@ -1,0 +1,47 @@
+.category-welcome { 
+    background:#EEE;
+    height: 250px;
+    display: flex;
+    width: 100%;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.left-plate-img, .right-plate-img {
+    background: transparent;
+    width: 20%;
+}
+
+.left-plate-img, .right-plate-img {
+    background-image: url('../header-plate.png');        
+    background-repeat: no-repeat;
+    background-position: -150px;
+}
+
+.right-plate-img {
+    background-position: 100px;    
+}
+
+.principal-label {    
+    background-color: #393A35;
+    width: 60%;
+    color: #EEE;  
+}
+
+.principal-category-label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 34px;   
+    font-weight: 550;
+    text-align: center;    
+    margin-top: 5%;        
+    /* text-decoration: underline; */
+}
+
+.principal-category-description { 
+    margin: 20%;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+

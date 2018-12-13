@@ -5,13 +5,13 @@ import PrincipalMessage from './components/PrincipalMessage';
 import './App.css';
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <React.Fragment>
+      <div className="main-page-container">
         <Header />
         <PrincipalMessage />
         <MainContainer />
-      </React.Fragment>
+      </div>
     );
   }
 }
