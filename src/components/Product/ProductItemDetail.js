@@ -4,7 +4,6 @@ import './Product.css';
 // import { FormattedNumber } from 'react-intl';
 
 class ProductItemDetail extends React.Component {
-
     render () {
         return (
             <StoreFrontend.Consumer>
@@ -14,18 +13,14 @@ class ProductItemDetail extends React.Component {
                         const item = getElementById(paramId);
 
                         return (
-
                             <div className="product-detail-container">
                                 <hr />
-
                                 <div className="url-breadcrumb">
                                     <span className="base-url-detail"> HOME / PLATES / </span> <span className="current-detail">{item.title}</span>
                                 </div>
-
                                 <div className="product-detail-image">
                                     <img src={item.image} alt="detail-plate-img" />
                                 </div>
-
                                 <div className="product-detail-text">
                                     <div className="product-detail-title">{item.title}</div>
                                     <div className="product-detail-price">
@@ -40,6 +35,9 @@ class ProductItemDetail extends React.Component {
                                         {item.description}
                                     </div>
 
+                                    <div className="add-to-cart-action">
+                                        <input type="number" name="add-plates" min="1" step="1" />
+                                    </div>
                                 </div>
                             </div>
                         );

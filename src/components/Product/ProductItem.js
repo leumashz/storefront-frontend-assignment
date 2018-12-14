@@ -37,16 +37,14 @@ class ProductItem extends React.Component {
         if (details) {
             itemActions =
                 <div className="action-btns">
-                    <button><Link to={`/plates/${this.props.item.id}`}>View Details</Link></button>
+                    <Link to={`/plates/${this.props.item.id}`}><button>View Details</button></Link>
                     <br />
                     <button>Add to Cart</button>
-                </div>;
+                </div >;
         }
 
         const item = <div className="product-item-card" onMouseEnter={this.showDetails}
-            onMouseLeave={this.hideDetails}
-        >
-            {/* onMouseLeave={this.hideDetails} */}
+            onMouseLeave={this.hideDetails}>
             <div className="product-item-element">
                 <img src={this.props.item.image} alt="plate-img" />
                 <div>

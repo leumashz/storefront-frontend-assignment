@@ -133,6 +133,8 @@
     text-align: center;
     color: #737D76;
     font-weight: 500;
+    word-spacing: 4px;
+    line-height: 25px;
 }
 
 .product-detail-price {
