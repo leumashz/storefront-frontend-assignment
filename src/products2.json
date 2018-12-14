@@ -1,0 +1,50 @@
+[
+  {
+    "id": 121,
+    "title": "Blue Stripe Stoneware Plate",
+    "brand": "Kiriko",
+    "price": 40,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "../img/blue-stripe-stoneware-plate.jpg"
+  },
+  {
+    "id": 122,
+    "title": "Hand Painted Blue Flat Dish",
+    "brand": "Kiriko",
+    "price": 28,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl, sit amet mattis dolor.",
+    "image": "../img/hand-painted-blue-flat-dish.jpg"
+  },
+  {
+    "id": 123,
+    "title": "Heme",
+    "brand": "Dust & Form",
+    "price": 52,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl, sit amet mattis dolor.",
+    "image": "../img/heme.jpg"
+  },
+  {
+    "id": 124,
+    "title": "Mashiko-Yaki Green Small Plate",
+    "brand": "Kiriko",
+    "price": 28,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "../img/mashiko-yaki-green-small-plate.jpg"
+  },
+  {
+    "id": 125,
+    "title": "Mashiko-Yaki Indigo Small Plate",
+    "brand": "Kiriko",
+    "price": 28,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "../img/mashiko-yaki-indigo-small-plate.jpg"
+  },
+  {
+    "id": 126,
+    "title": "Mashiko-Yaki Saucer",
+    "brand": "Kiriko",
+    "price": 18,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "../img/mashiko-yaki-saucer.jpg"
+  }
+]
