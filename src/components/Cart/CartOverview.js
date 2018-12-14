@@ -10,15 +10,15 @@ const CartOverview = () => {
     return (
         <React.Fragment>
             <div className="cart-overview-page">
-                <div className="cart-overview-title">
-                    CART OVERVIEW
-                </div>
                 <div className="cart-overview-content">
                     <StoreFrontend.Consumer>
                         {
-                            ({ getTotal }) => {
-                                return (
+                            ({ getTotal, getCartLength }) => {
+                                const shopAction = (
                                     <React.Fragment>
+                                        <div className="cart-overview-title">
+                                            CART OVERVIEW
+                                        </div>
                                         <div className="cart-overview-subtotal">
                                             total: $122.00
                                         </div>
@@ -31,10 +31,21 @@ const CartOverview = () => {
                                         <div className="cart-overview-continue-shopping">
                                             <Link to="/">
                                                 Continue shopping
-                                            </Link>
-                                        </div>
+                                        </Link>
+                                        </div>                                        
                                     </React.Fragment>
-                                )
+                                );
+
+                                const emptyCart = (
+                                    <React.Fragment>
+                                        <div className="empty-cart-action">Empty Cart</div>                                        
+                                    </React.Fragment>
+                                );
+
+                                const currentShopStatus = getCartLength() > 0 ? shopAction : emptyCart;
+
+                                return currentShopStatus;
+
                             }
                         }
                     </StoreFrontend.Consumer>

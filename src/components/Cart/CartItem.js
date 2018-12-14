@@ -16,14 +16,14 @@ const CartItem = ({ item }) => (
         </div>
         <div className="cart-item-actions">
             <StoreFrontend.Consumer>
-                {({ getTotal, removeAll }) => {
+                {({ getTotal, removeAll, getQuantity, updateRootQuantity }) => {
                     return (
                         <React.Fragment>
-                            <div className="cart-item-quantity">
-                                12
+                            <div className="cart-item-quantity">                                
+                                <input type="number" min="1" step="1" value={getQuantity(item.id)} onChange={(e) => updateRootQuantity(item.id, e.target.value)} />
                             </div>
                             <div className="cart-item-remove">
-                                <span onClick={() => removeAll(item.id)}>X</span>
+                                <span onClick={() => removeAll(item.id)}>&#10006;</span>
                             </div>
                         </React.Fragment>
                     )

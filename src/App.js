@@ -79,6 +79,23 @@ class App extends Component {
     })
   }
 
+  getQuantity = (itemId) => {
+    const quantity = this.state.cart[itemId];
+
+    return quantity;
+  }
+
+  updateRootQuantity = (itemId, quantity) => {
+    const cart = this.state.cart;
+    cart[itemId] = parseInt(quantity);
+
+    this.setState(
+      {
+        cart: cart
+      }
+    )
+  } 
+
   render () {
     return (
       <StoreFrontendContext.Provider value={{
@@ -91,7 +108,9 @@ class App extends Component {
         getCartLength: this.getCartLength,
         getItemsInCart: this.getItemsInCart,
         getTotal: this.getTotal,
-        removeAll: this.removeAll
+        removeAll: this.removeAll,
+        getQuantity: this.getQuantity,
+        updateRootQuantity: this.updateRootQuantity
       }}>
         <div className="main-page-container">
           <Header />
