@@ -22,7 +22,9 @@ const Header = () => (
             <StoreFrontend.Consumer>
               {
                 ({ getCartLength }) =>
-                  <span>MY CART ({getCartLength()})</span>
+                  <Link to="/cart">
+                    <span>MY CART ({getCartLength()})</span>
+                  </Link>
               }
             </StoreFrontend.Consumer>
           </li>

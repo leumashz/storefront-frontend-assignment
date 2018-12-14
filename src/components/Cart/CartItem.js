@@ -1,4 +1,5 @@
 import React from 'react';
+// import './Cart.css';
 
 const CartItem = ({ item }) => (
     <div className="cart-item-container">
@@ -15,3 +16,5 @@ const CartItem = ({ item }) => (
         </div>
     </div>
 );
+
+export default CartItem;

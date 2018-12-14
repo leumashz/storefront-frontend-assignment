@@ -13,7 +13,10 @@ class App extends Component {
     super(props);
     this.state = {
       products: products,
-      cart: {}
+      cart: {
+        121: 3,
+        122: 1
+      }
     }
   }
 
@@ -26,8 +29,6 @@ class App extends Component {
         cart: cart
       }
     )
-
-    // console.log(this.state.cart);
   }
 
   getElementById = (itemId) => {
@@ -56,16 +57,29 @@ class App extends Component {
     return totalElements;
   }
 
+  getItemsInCart = () => {
+    const ids = Object.keys(this.state.cart);
+    const currentItems = ids.map((id) => this.getElementById(id));
+
+    return currentItems;
+  }
+
+  getTotal = () => {
+
+  }
+
   render () {
     return (
       <StoreFrontendContext.Provider value={{
-        cart: [],
+        cart: this.state.cart,
         products: this.state.products,
         addItemToCart: this.addItemToCart,
         getElementById: this.getElementById,
         setProductList: this.setProductList,
         clearCart: this.clearCart,
-        getCartLength: this.getCartLength
+        getCartLength: this.getCartLength,
+        getItemsInCart: this.getItemsInCart,
+        getTotal: this.getTotal
       }}>
         <div className="main-page-container">
           <Header />
