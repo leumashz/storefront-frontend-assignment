@@ -181,3 +181,19 @@
     padding-left: 15px;
     margin-left: 20px;
 }
+
+.add-to-cart-action {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-left: 60px;   
+}
+
+.add-to-cart-action button { 
+    text-transform: uppercase;
+}
+
+.add-to-cart-action button:hover { 
+    cursor: pointer;
+    background: #393A35;
+}

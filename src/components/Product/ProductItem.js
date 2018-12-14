@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import ProductPrice from './ProductPrice';
+import ProductPopUpActions from './ProductPopUpActions';
 import './Product.css';
-
 
 class ProductItem extends React.Component {
     constructor() {
         super();
         this.state = { details: false };
-    }
-
-    hideElements = false;
+    }    
 
     showDetails = () => {
         this.setState({ details: true });
@@ -20,27 +17,13 @@ class ProductItem extends React.Component {
         this.setState({ details: false });
     }
 
-    onClick = () => {
-
-    }
-
-    componentDidUpdate () {
-        // console.log('component update');
-        // console.log(this.props);
-    }
-
-    render () {
+    render() {
         const details = this.state.details;
 
         let itemActions = null;
 
         if (details) {
-            itemActions =
-                <div className="action-btns">
-                    <Link to={`/plates/${this.props.item.id}`}><button>View Details</button></Link>
-                    <br />
-                    <button>Add to Cart</button>
-                </div >;
+            itemActions = <ProductPopUpActions id={this.props.item.id} />
         }
 
         const item = <div className="product-item-card" onMouseEnter={this.showDetails}
@@ -55,12 +38,7 @@ class ProductItem extends React.Component {
                         {this.props.item.title}
                     </div>
                     <div className="product-price">
-                        {
-                            new Intl.NumberFormat('en-US', {
-                                style: 'currency',
-                                currency: 'USD'
-                            }).format(this.props.item.price)
-                        }
+                        <ProductPrice price={this.props.item.price} />
                     </div>
                 </div>
             </div>

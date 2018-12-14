@@ -1,10 +1,11 @@
 import React from 'react';
 import StoreFrontend from '../../StoreFrontend.context';
 import './Product.css';
-// import { FormattedNumber } from 'react-intl';
+import CartActions from '../Cart/CartActions';
+import ProductPrice from './ProductPrice';
 
 class ProductItemDetail extends React.Component {
-    render () {
+    render() {
         return (
             <StoreFrontend.Consumer>
                 {
@@ -24,21 +25,14 @@ class ProductItemDetail extends React.Component {
                                 <div className="product-detail-text">
                                     <div className="product-detail-title">{item.title}</div>
                                     <div className="product-detail-price">
-                                        {
-                                            new Intl.NumberFormat('en-US', {
-                                                style: 'currency',
-                                                currency: 'USD'
-                                            }).format(item.price)
-                                        }
+                                        <ProductPrice price={item.price} />
                                     </div>
+
                                     <div className="product-detail-description">
                                         {item.description}
                                     </div>
 
-                                    <div className="add-to-cart-action">
-                                        <input type="number" name="add-plates" min="1" step="1" defaultValue="1" />
-                                        <button>Add to cart</button>
-                                    </div>
+                                    <CartActions itemId={item.id} />
                                 </div>
                             </div>
                         );
