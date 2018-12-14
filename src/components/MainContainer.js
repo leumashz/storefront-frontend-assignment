@@ -1,16 +1,20 @@
 import React from 'react';
 import ProductList from './Product/ProductList';
-import { products } from '../products.json';
+import StoreFrontend from '../StoreFrontend.context';
 
 class MainContainer extends React.Component {
-  componentDidMount () {
-    // fetch('../products.json')
-    //   .then(response => console.log(response))
-    console.log(products);
-  }
 
   render () {
-    return <ProductList items={products} />;
+    return (
+      <StoreFrontend.Consumer>
+        {
+          ({ products }) => {
+            return <ProductList items={products} />;
+          }
+        }
+      </StoreFrontend.Consumer>
+    );
+
   }
 }
 
