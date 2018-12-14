@@ -1,0 +1,9 @@
+{
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "files.associations": {
+        "*.jsx-": "javascriptreact",
+        "*.js": "javascriptreact"
+    }
+}
