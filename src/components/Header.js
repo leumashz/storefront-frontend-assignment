@@ -20,8 +20,9 @@ const Header = () => (
           <li>MORE</li>
           <li>
             <StoreFrontend.Consumer>
-              {({ getCartLength }) =>
-                <span>MY CART ({getCartLength()})</span>
+              {
+                ({ getCartLength }) =>
+                  <span>MY CART ({getCartLength()})</span>
               }
             </StoreFrontend.Consumer>
           </li>

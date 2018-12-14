@@ -13,17 +13,21 @@ class App extends Component {
     super(props);
     this.state = {
       products: products,
-      cart: []
+      cart: {}
     }
   }
 
   addItemToCart = (itemId, quantity) => {
-    console.log(this.state.cart, 'after');
-    this.setState({
-      cart: [...this.state.cart, itemId]
-    })
-    console.log(this.state.cart, 'before');
+    const cart = this.state.cart;
+    cart[itemId] = cart[itemId] ? parseInt(cart[itemId]) + parseInt(quantity) : parseInt(quantity);
 
+    this.setState(
+      {
+        cart: cart
+      }
+    )
+
+    // console.log(this.state.cart);
   }
 
   getElementById = (itemId) => {
@@ -46,7 +50,7 @@ class App extends Component {
     this.state.cart.length
   );
 
-  render() {
+  render () {
     return (
       <StoreFrontendContext.Provider value={{
         cart: [],

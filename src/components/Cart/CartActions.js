@@ -18,13 +18,13 @@ class CartActions extends React.Component {
         }
     }
 
-    render() {
+    render () {
         return (
             <StoreFrontend.Consumer>
                 {({ addItemToCart }) =>
                     <div className="add-to-cart-action">
-                        <input type="number" name="add-plates" min="1" step="1" value={this.state.quantity} onChange={(e) => this.updateQuantity(e)} onClick={() => addItemToCart(this.props.itemId, this.state.quantity)} />
-                        <button>Add to cart</button>
+                        <input type="number" name="add-plates" min="1" step="1" value={this.state.quantity} onChange={(e) => this.updateQuantity(e)} />
+                        <button onClick={() => addItemToCart(this.props.itemId, this.state.quantity)}>Add to cart</button>
                     </div>
                 }
             </StoreFrontend.Consumer>
