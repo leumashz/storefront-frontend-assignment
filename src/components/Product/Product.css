@@ -8,13 +8,18 @@
 .product-item-card {
     background:#FFF;
     width: 30%;
-    height: 300px;        
-    
+    height: 300px;            
 }
 
 .product-item-element {
     margin: 20px;
     /* width: 100%; */
+}
+
+.product-item-element:hover {
+    /* background: #737D76; */
+    opacity: 0.4;
+    cursor: pointer;
 }
 
 .product-item-card img { 
@@ -32,7 +37,7 @@
 }
 
 .product-label  {
-    font-size: 10px;
+    font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: #000;
@@ -46,6 +51,92 @@
     width: 100%;
 }
 
-.product-price::before { 
-    content: "$";
+.action-btns { 
+    position: absolute;    
+    margin-top: -250px;
+    margin-left: 100px;
+}
+
+.action-btns button {
+    border: none;
+    outline: none;
+    color: #FFF;
+    background:#000;
+    clear: both;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.action-btns button:hover { 
+    cursor: pointer;
+    background: #393A35;
+}
+
+.action-btns a{ 
+    text-decoration: none;
+    color: #FFF;
+}
+
+.product-detail-container {
+    width: 100%;
+}
+
+.product-detail-image {
+    float: left;
+}
+
+.product-detail-image img {
+    width: 600px;
+    height: 400px;
+}
+
+.product-detail-text {
+    float: right;
+    width:400px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.current-detail {
+    color: #737D76;
+    font-size: 18px;
+    text-transform: uppercase;    
+}
+
+.base-url-detail {
+    color: #393A35;
+    font-weight: bold;
+}
+
+.url-breadcrumb {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.product-detail-title, .product-detail-description, .product-detail-price {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-detail-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;        
+}
+
+.product-detail-description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;    
+    text-align: center;
+    color: #737D76;
+    font-weight: 500;
+}
+
+.product-detail-price {
+    color: #737D76;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
 }

@@ -13,11 +13,17 @@
 }
 
 .menu-hero-header li{ 
-    background: transparent;    
-    /* display: inline; */
+    background: transparent;        
     list-style: none;
     padding: 20px;    
     float: left;
+    font-size: 14px;
+    font-weight: bold;    
+}
+
+.menu-hero-header li a {
+    text-decoration: none;
+    color: #000;
 }
 
 .menu-hero-header li:last-child {
