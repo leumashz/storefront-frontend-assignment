@@ -46,9 +46,15 @@ class App extends Component {
     })
   }
 
-  getCartLength = () => (
-    this.state.cart.length
-  );
+  getCartLength = () => {
+    const values = Object.values(this.state.cart);
+
+    const totalElements = values.reduce((prev, curr) => {
+      return prev + curr;
+    }, 0);
+
+    return totalElements;
+  }
 
   render () {
     return (
