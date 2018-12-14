@@ -25,17 +25,17 @@
 
 .cart-item-img {
     float: left;
-    width: 40%;
+    width: 30%;
 }
 
 .cart-item-info {
     float: left;
     margin-top: 20px;
-    width: 40%;
+    width: 30%;    
 }
 
 .cart-item-container {
-    width:800px;
+    width:900px;
     margin-left: 50px;
     margin-top: 20px; 
     clear: both;   
@@ -99,7 +99,7 @@
 }
 
 .cart-item-actions {
-    width: 20%;
+    width: 30%;
     float: right;    
 }
 
@@ -115,6 +115,15 @@
 
 .cart-item-remove {
     float: right;
+}
+
+.cart-item-price {
+    color: #737D76;
+    float: right;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    
 }
 
 .cart-item-remove:hover {
