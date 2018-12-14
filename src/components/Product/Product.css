@@ -1,3 +1,4 @@
+/* List of products container elements*/
 .product-list-container { 
     display: flex;
     flex-wrap: wrap;
@@ -5,6 +6,7 @@
     align-content: stretch;
 }
 
+/* Start Individual product item */
 .product-item-card {
     background:#FFF;
     width: 30%;
@@ -49,6 +51,9 @@
     width: 100%;
 }
 
+/* End Individual product item */
+
+/* Action buttons for products (view details and add to cart) */
 .action-btns { 
     position: absolute;    
     margin-top: -250px;
@@ -78,6 +83,8 @@
     color: #FFF;
 }
 
+
+/* product detail main container */
 .product-detail-container {
     width: 100%;
 }
@@ -115,6 +122,7 @@
     margin-bottom: 40px;
 }
 
+/* product detail description */ 
 .product-detail-title, .product-detail-description, .product-detail-price {
     text-align: center;
     margin-bottom: 20px;
@@ -141,6 +149,8 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Start add to cart button style*/
+/* start number input */
 .add-to-cart-action input[type=number]::-webkit-inner-spin-button{
     opacity: 1;
     height: 20px;
@@ -163,6 +173,8 @@
 {
   margin: 5px;    
 }
+
+/* end number input */
 
 .add-to-cart-action button {
     border: none;
@@ -195,6 +207,9 @@
     background: #393A35;
 }
 
+/* End add to cart button style*/
+
+/* media querie for small desktop */
 @media only screen and (max-width: 900px) {
     .product-item-card {
         width: 40%;
@@ -216,7 +231,7 @@
     }
 }
 
-
+/* media querie for mobile*/
 @media only screen and (max-width: 600px) {
     .product-item-card {
         width: 100%;
@@ -239,6 +254,7 @@
     }
 }
 
+/* media querie for special desktop space */
 @media only screen and (max-width: 1000px) {
     .product-detail-container  {
         width: 100%;
@@ -259,3 +275,5 @@
         width: 100%;
     }
 }
+
+/* just cart view are not responsive */

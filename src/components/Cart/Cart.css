@@ -1,3 +1,4 @@
+/* css for cart container */
 .cart-page-container {
     display: block;
     background: #F6F6F6;
@@ -46,6 +47,8 @@
     width:200px;
     height: 150px;
 }
+
+/* Individual item element */
 
 .cart-item-category {
     color: #737D76;
@@ -97,7 +100,7 @@
     color: #000;
     font-weight: bold;
 }
-
+/* actions are increment/decrement quantity, display price and remove all */
 .cart-item-actions {
     width: 30%;
     float: right;    
@@ -133,12 +136,13 @@
 .cart-item-remove {
     font-size: 24px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    /* margin-bottom: 60px; */
+    font-family: Arial, Helvetica, sans-serif;    
     margin-left: 30px;
     margin-top: 35px;
     color: #737D76;
 }
+
+/* total and subtotal overview */
 
 .cart-overview-checkout-btn button {
     background: #1D1D1F;
@@ -174,6 +178,7 @@
     cursor: pointer;
 }
 
+/* start Input controller for increment decrement quantity */
 .cart-item-quantity input[type=number]::-webkit-inner-spin-button{
     opacity: 1;
     height: 20px;
@@ -198,6 +203,8 @@
   margin: 5px;    
 }
 
+/* end Input controller for increment decrement quantity */
+
 .empty-cart-action {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -207,3 +214,4 @@
     margin: 20px;
     margin-right: 300px;        
 }
+
