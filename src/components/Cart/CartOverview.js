@@ -1,12 +1,9 @@
 import React from 'react';
 import StoreFrontend from '../../StoreFrontend.context';
 import { Link } from 'react-router-dom';
+import ProductPrice from '../Product/ProductPrice';
 
 const CartOverview = () => {
-    const clearBoth = {
-        clear: 'both',
-        marginTop: '40px'
-    };
     return (
         <React.Fragment>
             <div className="cart-overview-page">
@@ -14,31 +11,33 @@ const CartOverview = () => {
                     <StoreFrontend.Consumer>
                         {
                             ({ getTotal, getCartLength }) => {
+                                const total = getTotal();
+
                                 const shopAction = (
                                     <React.Fragment>
                                         <div className="cart-overview-title">
                                             CART OVERVIEW
                                         </div>
                                         <div className="cart-overview-subtotal">
-                                            total: $122.00
+                                            subtotal: <ProductPrice price={total} />
                                         </div>
                                         <div className="cart-overview-total">
-                                            subtotal: <span>$122.00 CAD</span>
+                                            total: <span><ProductPrice price={total} /> CAD</span>
                                         </div>
                                         <div className="cart-overview-checkout-btn">
-                                            <button>Checkout ($122.00)</button>
+                                            <button>Checkout (<ProductPrice price={total} />)</button>
                                         </div>
                                         <div className="cart-overview-continue-shopping">
                                             <Link to="/">
                                                 Continue shopping
                                         </Link>
-                                        </div>                                        
+                                        </div>
                                     </React.Fragment>
                                 );
 
                                 const emptyCart = (
                                     <React.Fragment>
-                                        <div className="empty-cart-action">Empty Cart</div>                                        
+                                        <div className="empty-cart-action">Empty Cart</div>
                                     </React.Fragment>
                                 );
 

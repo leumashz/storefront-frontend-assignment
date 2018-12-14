@@ -66,7 +66,15 @@ class App extends Component {
   }
 
   getTotal = () => {
+    const cart = this.state.cart;
+    let total = 0;
 
+    for (let id in cart) {
+      let element = this.getElementById(id);
+      total += element.price * parseInt(cart[id]);
+    }
+
+    return total;
   }
 
   removeAll = (itemId) => {
@@ -94,7 +102,7 @@ class App extends Component {
         cart: cart
       }
     )
-  } 
+  }
 
   render () {
     return (
