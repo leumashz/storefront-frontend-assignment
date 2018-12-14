@@ -36,7 +36,8 @@ class ProductItemDetail extends React.Component {
                                     </div>
 
                                     <div className="add-to-cart-action">
-                                        <input type="number" name="add-plates" min="1" step="1" />
+                                        <input type="number" name="add-plates" min="1" step="1" defaultValue="1" />
+                                        <button>Add to cart</button>
                                     </div>
                                 </div>
                             </div>
