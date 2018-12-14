@@ -13,11 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       products: products,
-      cart: {
-        121: 3,
-        122: 1
-      },
-      cartItems: []
+      cart: {},      
     }
   }
 

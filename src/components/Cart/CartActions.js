@@ -8,8 +8,7 @@ class CartActions extends React.Component {
     }
 
     updateQuantity = (event) => {
-        event.preventDefault();
-        console.log('triggered update');
+        event.preventDefault();        
         if (isNaN(event.target.value) || !event.target.value) {
             this.setState({ quantity: 1 });
 

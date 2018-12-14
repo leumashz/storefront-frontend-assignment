@@ -7,7 +7,11 @@ import StoreFrontend from '../StoreFrontend.context';
 const Header = () => (
   <React.Fragment>
     <div>
-      <div className="store-name"><img src={logo} alt="hero-logo"></img></div>
+      <div className="store-name">
+        <Link to="/">
+          <img src={logo} alt="hero-logo"></img>
+        </Link>
+      </div>
       <div className="store-menu-section">
         <ul className="menu-hero-header">
           <li>
