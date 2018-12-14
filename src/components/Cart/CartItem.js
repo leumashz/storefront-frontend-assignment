@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Cart.css';
+import StoreFrontend from '../../StoreFrontend.context';
 
 const CartItem = ({ item }) => (
     <div className="cart-item-container">
@@ -13,6 +13,23 @@ const CartItem = ({ item }) => (
             <div className="cart-item-title">
                 {item.title}
             </div>
+        </div>
+        <div className="cart-item-actions">
+            <StoreFrontend.Consumer>
+                {({ getTotal, removeAll }) => {
+                    return (
+                        <React.Fragment>
+                            <div className="cart-item-quantity">
+                                12
+                            </div>
+                            <div className="cart-item-remove">
+                                <span onClick={() => removeAll(item.id)}>X</span>
+                            </div>
+                        </React.Fragment>
+                    )
+                }
+                }
+            </StoreFrontend.Consumer>
         </div>
     </div>
 );

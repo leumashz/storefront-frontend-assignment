@@ -21,7 +21,7 @@ class CartPage extends React.Component {
                                 return (
                                     <React.Fragment>
                                         <CartList items={itemsInCart} />
-                                        <CartOverview />
+                                        <CartOverview />                                      
                                     </React.Fragment>
                                 )
                             }

@@ -1,5 +1,6 @@
 import React from 'react';
 import StoreFrontend from '../../StoreFrontend.context';
+import { Link } from 'react-router-dom';
 
 const CartOverview = () => {
     const clearBoth = {
@@ -8,15 +9,12 @@ const CartOverview = () => {
     };
     return (
         <React.Fragment>
-            <div className="overview-separator">
-                <hr style={clearBoth} />
-            </div>
             <div className="cart-overview-page">
                 <div className="cart-overview-title">
-                    Cart Overview
+                    CART OVERVIEW
                 </div>
                 <div className="cart-overview-content">
-                    <StoreFrontend>
+                    <StoreFrontend.Consumer>
                         {
                             ({ getTotal }) => {
                                 return (
@@ -25,13 +23,21 @@ const CartOverview = () => {
                                             total: $122.00
                                         </div>
                                         <div className="cart-overview-total">
-                                            subtotal: $122.00
+                                            subtotal: <span>$122.00 CAD</span>
+                                        </div>
+                                        <div className="cart-overview-checkout-btn">
+                                            <button>Checkout ($122.00)</button>
+                                        </div>
+                                        <div className="cart-overview-continue-shopping">
+                                            <Link to="/">
+                                                Continue shopping
+                                            </Link>
                                         </div>
                                     </React.Fragment>
                                 )
                             }
                         }
-                    </StoreFrontend>
+                    </StoreFrontend.Consumer>
                 </div>
             </div>
         </React.Fragment>

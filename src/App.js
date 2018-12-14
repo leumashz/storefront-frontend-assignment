@@ -16,7 +16,8 @@ class App extends Component {
       cart: {
         121: 3,
         122: 1
-      }
+      },
+      cartItems: []
     }
   }
 
@@ -68,6 +69,16 @@ class App extends Component {
 
   }
 
+  removeAll = (itemId) => {
+    let filteredCart = this.state.cart;
+
+    delete filteredCart[itemId];
+
+    this.setState({
+      cart: filteredCart
+    })
+  }
+
   render () {
     return (
       <StoreFrontendContext.Provider value={{
@@ -79,7 +90,8 @@ class App extends Component {
         clearCart: this.clearCart,
         getCartLength: this.getCartLength,
         getItemsInCart: this.getItemsInCart,
-        getTotal: this.getTotal
+        getTotal: this.getTotal,
+        removeAll: this.removeAll
       }}>
         <div className="main-page-container">
           <Header />

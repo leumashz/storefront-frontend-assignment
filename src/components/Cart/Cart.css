@@ -8,8 +8,8 @@
 }
 
 .cart-page-title {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
     font-size: 45px;
     font-family: 'Times New Roman', Times, serif;
@@ -29,13 +29,13 @@
 }
 
 .cart-item-info {
-    float: right;
+    float: left;
     margin-top: 20px;
-    width: 60%;
+    width: 40%;
 }
 
 .cart-item-container {
-    width: 600px;
+    width:800px;
     margin-left: 50px;
     margin-top: 20px; 
     clear: both;   
@@ -73,6 +73,7 @@
 
 .cart-overview-title {
     margin-top: 40px;
+    color: #737D76;
 }
 
 .overview-separator {
@@ -84,5 +85,70 @@
 
 .cart-overview-subtotal, .cart-overview-total {
     text-transform: uppercase;
-    margin-right: 20px;
+    margin-right: 20px;    
+    color: #737D76;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+
+.cart-overview-total span{
+    color: #000;
+    font-weight: bold;
+}
+
+.cart-item-actions {
+    width: 20%;
+    float: right;    
+}
+
+.cart-item-quantity, .cart-item-remove {
+    width:10%;    
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.cart-item-quantity {
+    float: left;
+}
+
+.cart-item-remove {
+    float: right;
+}
+
+.cart-item-remove:hover {
+    cursor:pointer;
+}
+
+.cart-overview-checkout-btn button {
+    background: #1D1D1F;
+    color: #FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 20px;
+    margin-top: 40px;
+    float: right;
+}
+
+.cart-overview-checkout-btn button:hover {
+    cursor: pointer;
+    background: #737D76;
+}
+
+.cart-overview-continue-shopping {
+    float: left;    
+    margin-top: 40px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.cart-overview-continue-shopping a {    
+    color: #000;
+}
+
+.cart-overview-continue-shopping a:hover {
+    cursor: pointer;
 }

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProductPrice = ({ price }) => {
     return (
         new Intl.NumberFormat('en-US', {
