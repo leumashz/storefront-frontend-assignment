@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import logo from '../logo.png';
 import { Link } from 'react-router-dom';
+import StoreFrontend from '../StoreFrontend.context';
 
 const Header = () => (
   <React.Fragment>
@@ -17,7 +18,13 @@ const Header = () => (
           <li>SHOP</li>
           <li>JOURNAL</li>
           <li>MORE</li>
-          <li>MY CART</li>
+          <li>
+            <StoreFrontend.Consumer>
+              {({ getCartLength }) =>
+                <span>MY CART ({getCartLength()})</span>
+              }
+            </StoreFrontend.Consumer>
+          </li>
         </ul>
       </div>
     </div>
