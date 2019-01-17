@@ -14,7 +14,7 @@ const ProductPopUpActions = ({ id }) => (
 
             }
         </StoreFronted.Consumer>
-    </div >
+    </div>
 );
 
 export default ProductPopUpActions;
