@@ -3,10 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import StoreFronted from '../../StoreFrontend.context';
 
 const ProductPopUpActions = ({ id }) => (
-    <div className="action-btns">
-        <Router>
-            <Link to={`/plates/${id}`}><button>View Details</button></Link>
-        </Router>
+    <div className="action-btns">        
+            <Link to={`/plates/${id}`}><button>View Details</button></Link>        
         <br />
         <StoreFronted.Consumer>
             {

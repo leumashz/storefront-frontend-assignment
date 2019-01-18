@@ -14,12 +14,10 @@ const Header = () => (
       </div>
       <div className="store-menu-section">
         <ul className="menu-hero-header">
-          <li>
-            <Router>
-              <Link to="/">
+          <li>            
+            <Link to="/">
                 HOME
-            </Link>
-            </Router>
+            </Link>            
           </li>
           <li>SHOP</li>
           <li>JOURNAL</li>

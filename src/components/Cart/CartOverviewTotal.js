@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter} from 'react-router-dom';
 import ProductPrice from '../Product/ProductPrice';
 
 const CartOverviewTotal = ({ total }) => (
@@ -16,12 +16,10 @@ const CartOverviewTotal = ({ total }) => (
         <div className="cart-overview-checkout-btn">
             <button>Checkout (<ProductPrice price={total} />)</button>
         </div>
-        <div className="cart-overview-continue-shopping">
-            <Router>
+        <div className="cart-overview-continue-shopping">            
                 <Link to="/">
                     Continue shopping
-                </Link>
-            </Router>
+                </Link>            
         </div>
     </React.Fragment>
 );
