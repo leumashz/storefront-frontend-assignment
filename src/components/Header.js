@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from '../logo.png';
-import { Link, withRouter, Router } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import StoreFrontend from '../StoreFrontend.context';
 
 const Header = () => (
@@ -14,10 +14,10 @@ const Header = () => (
       </div>
       <div className="store-menu-section">
         <ul className="menu-hero-header">
-          <li>            
+          <li>
             <Link to="/">
-                HOME
-            </Link>            
+              HOME
+            </Link>
           </li>
           <li>SHOP</li>
           <li>JOURNAL</li>
