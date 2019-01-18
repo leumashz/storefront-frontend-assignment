@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import StoreFronted from '../../StoreFrontend.context';
 
 const ProductPopUpActions = ({ id }) => (
     <div className="action-btns">
-        <Link to={`/plates/${id}`}><button>View Details</button></Link>
+        <Router>
+            <Link to={`/plates/${id}`}><button>View Details</button></Link>
+        </Router>
         <br />
         <StoreFronted.Consumer>
             {
@@ -17,4 +19,4 @@ const ProductPopUpActions = ({ id }) => (
     </div>
 );
 
-export default ProductPopUpActions;
+export default withRouter(ProductPopUpActions);

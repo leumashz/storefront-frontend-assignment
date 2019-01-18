@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from '../logo.png';
-import { Link } from 'react-router-dom';
+import { Link, withRouter, Router } from 'react-router-dom';
 import StoreFrontend from '../StoreFrontend.context';
 
 const Header = () => (
@@ -15,9 +15,11 @@ const Header = () => (
       <div className="store-menu-section">
         <ul className="menu-hero-header">
           <li>
-            <Link to="/">
-              HOME
+            <Router>
+              <Link to="/">
+                HOME
             </Link>
+            </Router>
           </li>
           <li>SHOP</li>
           <li>JOURNAL</li>
@@ -38,4 +40,4 @@ const Header = () => (
   </React.Fragment>
 );
 
-export default Header;
+export default withRouter(Header);

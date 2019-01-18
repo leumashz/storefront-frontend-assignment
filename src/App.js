@@ -3,7 +3,7 @@ import CategoryView from './components/CategoryView';
 import ProductItemDetail from './components/Product/ProductItemDetail';
 import CartPage from './components/Cart/CartPage';
 import Header from './components/Header';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import './App.css';
 import StoreFrontendContext from './StoreFrontend.context';
 import products from './products2.json';
@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       products: products,
-      cart: {},      
+      cart: {},
     }
   }
 
@@ -129,4 +129,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
