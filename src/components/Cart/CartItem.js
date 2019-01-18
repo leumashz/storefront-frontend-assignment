@@ -9,13 +9,7 @@ const CartItem = ({ item }) => (
         <div className="cart-item-actions">
             <StoreFrontend.Consumer>
                 {
-                    ({ removeAll, getQuantity, updateRootQuantity }) => {
-                        return (
-                            <React.Fragment>
-                                <CartItemActions {...{ removeAll, getQuantity, updateRootQuantity, item }} />
-                            </React.Fragment>
-                        )
-                    }
+                    ({ removeAll, getQuantity, updateRootQuantity }) => <CartItemActions {...{ removeAll, getQuantity, updateRootQuantity, item }} />
                 }
             </StoreFrontend.Consumer>
         </div>

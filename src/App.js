@@ -7,7 +7,6 @@ import { Route, Switch, withRouter } from "react-router-dom";
 import './App.css';
 import StoreFrontendContext from './StoreFrontend.context';
 import products from './products2.json';
-// import { RefCountDisposable } from 'rx';
 
 class App extends Component {
   constructor(props) {
@@ -91,8 +90,7 @@ class App extends Component {
   }
 
   updateRootQuantity = (itemId, quantity) => {
-    console.log(quantity, 'current quantity')
-    if (Number.isNaN(quantity) || !quantity) {      
+    if (isNaN(quantity) || !quantity) {
       return;
     }
 
